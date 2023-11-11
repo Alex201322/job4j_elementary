@@ -15,8 +15,8 @@ public class Fit {
         short height = 176;
         double man = Fit.manWeight(height);
         double woman = Fit.womanWeight(height);
-        System.out.printf("Man height: %d man: %.3f  \n", height, man);
-        System.out.printf("Woman height: %d woman: %.3f  \n", height, woman);
+        System.out.printf("Man height: %d - corresponds to weight: %.3f  \n", height, man);
+        System.out.printf("Woman height: %d - corresponds to weight: %.3f  \n", height, woman);
     }
 
 }
