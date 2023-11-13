@@ -9,8 +9,8 @@ public class SqArea {
     }
 
     public static void main(String[] args) {
-        double p = 6, k = 2;
-        double r  = SqArea.square(p, k);
-        System.out.println(r);
+        double p = 8, k = 4;
+        double s = SqArea.square(p, k);
+        System.out.printf(" Area %.2f \n", s);
     }
 }
