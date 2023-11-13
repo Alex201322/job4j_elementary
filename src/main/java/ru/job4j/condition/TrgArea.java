@@ -10,6 +10,6 @@ public class TrgArea {
     public static void main(String[] args) {
         double a = 8, b = 9, c = 9;
         double s = TrgArea.area(a, b, c);
-        System.out.println("Area of a triangle = " + s);
+        System.out.printf("Area of a triangle = %.2f \n ", s);
     }
 }
