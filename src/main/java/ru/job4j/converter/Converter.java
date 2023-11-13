@@ -1,21 +1,26 @@
 package ru.job4j.converter;
 
 public class Converter {
-    public static double rubleToEuro(double value) {
+    public static double tengeToEuro(double value) {
          return value / 499.05;
     }
 
-    public static double rubleToDollar(double value) {
+    public static double tengeToDollar(double value) {
          return  value / 468.10;
     }
 
     public static void main(String[] args) {
-
-        double euro = Converter.rubleToEuro(2000);
-        double dollar = Converter.rubleToDollar(1001);
-        double sum1 = euro * 499.05;
-        double sum2 = dollar * 468.10;
-        System.out.printf("tenge: %.3f euro: %.3f  \n", sum1, euro);
-        System.out.printf("tenge: %.3f dollar: %.3f  \n", sum2, dollar);
+        double e = 40000.05;
+        double d = 9000000000000.99;
+        double euro = Converter.tengeToEuro(e);
+        double dollar = Converter.tengeToDollar(d);
+        double sum1 = Math.floor(Math.round(euro * 499.05 * 100)) / 100;
+        double sum2 = Math.floor(Math.round(dollar * 468.10 * 100)) / 100;
+        System.out.println(sum1 + "  " + e);
+        System.out.println(sum2 + "  " + d);
+        boolean passed1 = sum1 == e;
+        boolean passed2 = sum2 == d;
+        System.out.printf("Tenge: %.2f euro: %.2f test: %s \n", sum1, euro,  passed1);
+        System.out.printf("Tenge: %.2f dollar: %.2f test: %s \n", sum2, dollar, passed2);
     }
 }
