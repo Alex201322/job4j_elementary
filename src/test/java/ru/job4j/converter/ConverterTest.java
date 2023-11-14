@@ -10,21 +10,21 @@ class ConverterTest {
 
     @Test
     void whenConvert1000TengeThen2Euro() {
-        double e = 1000;
-        double sum1 = 2;
-        double euro = Converter.tengeToEuro(e);
-        double eps = 0.0001f;
-        assertThat(euro).isEqualTo(sum1, withPrecision(eps));
+        double income = 800;
+        double expected = 1.5996800639872024;
+        double result = Converter.tengeToEuro(income);
+        double delta = 0.0001f;
+        assertThat(result).isEqualTo(expected, withPrecision(delta));
 
     }
 
     @Test
     void whenConvert800TengeThen2Dollar() {
-        double e = 800;
-        double sum2 = 2;
-        double dollar = Converter.tengeToEuro(e);
+        double income = 400;
+        double expected = 0.7998400319936012;
+        double result = Converter.tengeToEuro(income);
         double eps = 0.0001f;
-        assertThat(dollar).isEqualTo(sum2, withPrecision(eps));
+        assertThat(result).isEqualTo(expected, withPrecision(eps));
 
     }
 }
