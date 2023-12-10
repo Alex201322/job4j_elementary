@@ -15,15 +15,14 @@ public class Task45 {
         boolean sum3 = num3 == 0;
 
         int result1 = (num2 + 1) * 10;
-        int result2 = num3 - num3;
 
-        int result3 = num1 * 100 + result1 + result2;
-        int result4 = (num1 * 100) + (num2 * 10) + result2;
+        int result3 = num1 * 100 + result1;
+        int result4 = (num1 * 100) + (num2 * 10);
 
         if (sum1) {
-            System.out.println("Увеличено до" + " " + result3);
+            System.out.printf("Увеличено до %d%n", result3);
         } else if (sum2) {
-            System.out.println("Уменьшено до" + " " + result4);
+            System.out.printf("Уменьшено до %d%n", result4);
         } else if (sum3) {
             System.out.println("Без изменений");
         }
@@ -31,7 +30,7 @@ public class Task45 {
     }
 
     public static void main(String[] args) {
-        int number = 44;
+        int number = 56;
         Task45.changeToRoundNum(number);
     }
 }
